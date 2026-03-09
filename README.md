@@ -124,6 +124,16 @@ DELETE /order/{orderId}
 
 ---
 
+# Teste rápido
+
+1. npm install
+2. npm run start
+3. abrir http://localhost:3000/docs
+4. gerar token em /auth/login
+5. autorizar com Bearer TOKEN
+
+---
+
 # Autor
 
 Davi Pereira Rio
