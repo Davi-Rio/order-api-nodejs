@@ -124,6 +124,22 @@ DELETE /order/{orderId}
 
 ---
 
+# Configuração do banco de dados
+
+Antes de rodar o projeto, crie um banco PostgreSQL chamado:
+
+jitterbit_orders
+
+Configuração utilizada no projeto:
+
+host: localhost
+port: 5432
+username: postgres
+password: postgres
+database: jitterbit_orders
+
+---
+
 # Teste rápido
 
 1. npm install
