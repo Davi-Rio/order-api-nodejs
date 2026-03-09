@@ -3,6 +3,8 @@ import { Order } from '../entities/order.entity/order.entity';
 import { Item } from '../entities/item.entity/item.entity';
 
 export class OrderMapper {
+    
+     // Converte o DTO recebido na API para a entidade que será persistida no banco
     static toEntity(dto: CreateOrderDto): Order {
         const order = new Order();
 

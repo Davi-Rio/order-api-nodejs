@@ -7,9 +7,9 @@ import { ApiTags, ApiOperation, ApiBody, ApiResponse } from '@nestjs/swagger';
 @ApiTags('Auth')
 @Controller('auth')
 export class AuthController {
-
+    
     constructor(private readonly authService: AuthService) { }
-
+    // Endpoint responsável por autenticar o usuário e gerar o token JWT
     @Post('login')
     @ApiOperation({ summary: 'Autenticar usuário e gerar token JWT' })
     @ApiBody({ type: LoginDto })

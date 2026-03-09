@@ -7,7 +7,8 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 async function bootstrap() {
 
   const app = await NestFactory.create(AppModule);
-
+  
+  // Habilita validação automática dos DTOs
   app.useGlobalPipes(new ValidationPipe());
 
   const config = new DocumentBuilder()

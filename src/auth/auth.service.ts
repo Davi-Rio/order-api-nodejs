@@ -5,7 +5,7 @@ import { JwtService } from '@nestjs/jwt';
 export class AuthService {
 
     constructor(private jwtService: JwtService) { }
-
+    // Validação simples de credenciais e geração do token JWT
     async login(username: string, password: string) {
 
         if (username !== 'admin' || password !== '123456') {

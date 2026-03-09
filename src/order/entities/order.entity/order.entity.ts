@@ -5,7 +5,8 @@ export class Order {
 
     @PrimaryGeneratedColumn()
     id: number;
-
+    
+    // Identificador único do pedido
     @Column({ unique: true })
     orderId: string;
 

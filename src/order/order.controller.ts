@@ -27,6 +27,8 @@ import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 @ApiTags('Order')
 @ApiBearerAuth('JWT-auth')
 @UseGuards(JwtAuthGuard)
+
+// Controller responsável pelas operações de gerenciamento de pedidos
 @Controller('order')
 export class OrderController {
 

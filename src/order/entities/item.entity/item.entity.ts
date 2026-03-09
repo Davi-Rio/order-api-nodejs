@@ -14,7 +14,8 @@ export class Item {
 
     @Column()
     price: number;
-
+    
+    // Cada item pertence a um pedido
     @ManyToOne(() => Order, order => order.items, { onDelete: 'CASCADE' })
     order: Order;
 }

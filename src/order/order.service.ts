@@ -17,6 +17,7 @@ export class OrderService {
         private readonly itemRepository: Repository<Item>,
     ) { }
 
+    // Cria um novo pedido realizando o mapeamento dos dados recebidos
     async create(createOrderDto: CreateOrderDto): Promise<Order> {
         const mappedOrder = OrderMapper.toEntity(createOrderDto);
 
@@ -31,6 +32,7 @@ export class OrderService {
         return await this.orderRepository.save(mappedOrder);
     }
 
+    // Retorna todos os pedidos cadastrados
     async findAll(): Promise<Order[]> {
         return await this.orderRepository.find({
             relations: ['items'],
@@ -38,6 +40,7 @@ export class OrderService {
         });
     }
 
+    // Busca um pedido pelo orderId
     async findOne(orderId: string): Promise<Order> {
         const order = await this.orderRepository.findOne({
             where: { orderId },
@@ -51,6 +54,7 @@ export class OrderService {
         return order;
     }
 
+    // Atualizar o pedido pelo orderId
     async update(orderId: string, updateOrderDto: CreateOrderDto): Promise<Order> {
         const existingOrder = await this.orderRepository.findOne({
             where: { orderId },
